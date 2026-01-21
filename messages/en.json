@@ -1,0 +1,46 @@
+{
+  "hero": {
+    "tag": "Personal academic website",
+    "name": "Gulomov Olimjon",
+    "desc": "Doctor of Law. Professor. Research interests: constitutional law, public administration, legal policy and reforms.",
+    "about": "Biography",
+    "publications": "Publications",
+    "contact": "Contact",
+    "photoHint": "Put your image here:"
+  },
+  "stats": {
+    "books": "Books",
+    "articles": "Articles",
+    "years": "Years of experience"
+  },
+  "bio": {
+    "title": "Biography",
+    "subtitle": "Short professional background",
+    "text": "Write a strong bio here: education, positions, achievements, research focus, awards."
+  },
+  "pub": {
+    "title": "Publications",
+    "subtitle": "Selected works and research",
+    "books": { "title": "Books", "text": "List authored books, years, publishers." },
+    "journals": { "title": "Journal articles", "text": "List peer-reviewed articles and journals." },
+    "foreign": { "title": "Foreign publications", "text": "International publications and collaborations." }
+  },
+  "news": {
+    "title": "News",
+    "subtitle": "Updates, events and announcements",
+    "date": "January 2026",
+    "item": "Announcement",
+    "readMore": "Read more"
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "For cooperation, lectures, consulting",
+    "emailTitle": "Email",
+    "phoneTitle": "Phone",
+    "locationTitle": "Location",
+    "locationText": "Tashkent, Uzbekistan"
+  },
+  "footer": {
+    "rights": "All rights reserved."
+  }
+}

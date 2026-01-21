@@ -1,0 +1,46 @@
+{
+  "hero": {
+    "tag": "Shaxsiy akademik veb-sayt",
+    "name": "Gulomov Olimjon",
+    "desc": "Yuridik fanlar doktori, professor. Ilmiy yo‘nalishlar: konstitutsiyaviy huquq, davlat boshqaruvi, huquqiy siyosat va islohotlar.",
+    "about": "Biografiya",
+    "publications": "Nashrlar",
+    "contact": "Aloqa",
+    "photoHint": "Rasmni shu yerga joylashtiring:"
+  },
+  "stats": {
+    "books": "Kitoblar",
+    "articles": "Maqolalar",
+    "years": "Yillik tajriba"
+  },
+  "bio": {
+    "title": "Biografiya",
+    "subtitle": "Qisqacha professional ma’lumot",
+    "text": "Bu yerda ta’lim, mehnat faoliyati, ilmiy yutuqlar, tadqiqot yo‘nalishlari va mukofotlar keltiriladi."
+  },
+  "pub": {
+    "title": "Nashrlar",
+    "subtitle": "Tanlangan ilmiy ishlar",
+    "books": { "title": "Kitoblar", "text": "Mualliflik kitoblari, nashr yillari va nashriyotlar." },
+    "journals": { "title": "Ilmiy maqolalar", "text": "Ilmiy jurnallarda chop etilgan maqolalar." },
+    "foreign": { "title": "Xorijiy nashrlar", "text": "Xalqaro nashrlar va ilmiy hamkorlik." }
+  },
+  "news": {
+    "title": "Yangiliklar",
+    "subtitle": "Voqealar, yangilanishlar va e’lonlar",
+    "date": "2026-yil yanvar",
+    "item": "Yangilik",
+    "readMore": "Batafsil"
+  },
+  "contact": {
+    "title": "Aloqa",
+    "subtitle": "Hamkorlik, ma’ruzalar va maslahatlar uchun",
+    "emailTitle": "Elektron pochta",
+    "phoneTitle": "Telefon",
+    "locationTitle": "Manzil",
+    "locationText": "Toshkent, O‘zbekiston"
+  },
+  "footer": {
+    "rights": "Barcha huquqlar himoyalangan."
+  }
+}
