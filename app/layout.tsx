@@ -11,3 +11,8 @@ export default function RootLayout({
     </html>
   );
 }
+
+icons: { icon: "/favicon.ico" }
+openGraph: {
+  images: [{ url: "/og.png", width: 1200, height: 630 }]
+}
