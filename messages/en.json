@@ -1,43 +1,92 @@
 {
+  "nav": {
+  "biography": "Biography",
+  "news": "News",
+  "publications": "Publications",
+  "conferences": "Conferences",
+  "community": "Community activities",
+  "contact": "Contact"
+  },
+  "cta": {
+    "biography": "About Me",
+    "publications": "Publications",
+    "contact": "Contact"
+  },
+  "tiles": {
+  "books": "Books",
+  "journals": "Journals",
+  "conferences": "Conferences",
+  "foreign": "Foreign Publications"
+},
   "hero": {
     "tag": "Personal academic website",
     "name": "Gulomov Olimjon",
-    "desc": "Doctor of Law. Professor. Research interests: constitutional law, public administration, legal policy and reforms.",
-    "about": "Biography",
-    "publications": "Publications",
-    "contact": "Contact",
-    "photoHint": "Put your image here:"
+    "desc": "Doctor of Law, Professor. Research interests: constitutional law, public administration, legal policy and reforms.",
+    "portraitAlt": "Portrait",
+    "photoHint": "Place your photo here:"
   },
   "stats": {
     "books": "Books",
     "articles": "Articles",
-    "years": "Years of experience"
+    "years": "Years of experience",
+    "booksValue": "12",
+    "articlesValue": "48",
+    "yearsValue": "20+"
   },
   "bio": {
     "title": "Biography",
     "subtitle": "Short professional background",
-    "text": "Write a strong bio here: education, positions, achievements, research focus, awards."
+    "profile": {
+      "title": "Profile",
+      "text": "Doctor of Law, Professor. Academic and professional work in public law and governance."
+    },
+    "education": {
+      "title": "Education",
+      "text": "Add degrees, institutions and years (e.g., PhD/Doctorate, Master’s, Bachelor’s)."
+    },
+    "positions": {
+      "title": "Positions",
+      "text": "List current and previous roles: department, university, centers, expert councils."
+    },
+    "long": "Write a precise and verifiable biography: key milestones, expertise, contributions to academia and practice, awards, public service."
+  },
+  "research": {
+    "title": "Research",
+    "subtitle": "Main areas and current projects",
+    "interests": {
+      "title": "Research interests",
+      "text": "List 4–8 areas (e.g., constitutional reforms, public administration, legal policy, anti-corruption governance)."
+    },
+    "projects": {
+      "title": "Projects & collaboration",
+      "text": "Add projects, grants, invitations and collaboration formats with organizations."
+    }
   },
   "pub": {
     "title": "Publications",
-    "subtitle": "Selected works and research",
-    "books": { "title": "Books", "text": "List authored books, years, publishers." },
-    "journals": { "title": "Journal articles", "text": "List peer-reviewed articles and journals." },
-    "foreign": { "title": "Foreign publications", "text": "International publications and collaborations." }
-  },
-  "news": {
-    "title": "News",
-    "subtitle": "Updates, events and announcements",
-    "date": "January 2026",
-    "item": "Announcement",
-    "readMore": "Read more"
+    "subtitle": "Selected academic works",
+    "books": {
+      "title": "Books",
+      "text": "Authored books, publication years and publishers."
+    },
+    "journals": {
+      "title": "Journal articles",
+      "text": "Peer-reviewed articles published in academic journals."
+    },
+    "foreign": {
+      "title": "International publications",
+      "text": "International outputs and academic collaboration."
+    },
+    "note": "Tip: add links to Google Scholar/ORCID to make your publications easy to verify."
   },
   "contact": {
     "title": "Contact",
-    "subtitle": "For cooperation, lectures, consulting",
+    "subtitle": "For collaboration, lectures and consulting",
     "emailTitle": "Email",
     "phoneTitle": "Phone",
     "locationTitle": "Location",
+    "emailValue": "example@email.com",
+    "phoneValue": "+998 XX XXX XX XX",
     "locationText": "Tashkent, Uzbekistan"
   },
   "footer": {

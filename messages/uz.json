@@ -40,6 +40,8 @@
     "locationTitle": "Manzil",
     "locationText": "Toshkent, O‘zbekiston"
   },
+  "tiles": { "conferences": "Konferensiyalar" },
+  
   "footer": {
     "rights": "Barcha huquqlar himoyalangan."
   }

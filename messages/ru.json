@@ -1,36 +1,75 @@
 {
+  "nav": {
+    "biography": "Биография",
+    "research": "Научная работа",
+    "publications": "Публикации",
+    "contact": "Контакты"
+  },
+  "cta": {
+    "biography": "Биография",
+    "publications": "Публикации",
+    "contact": "Контакты"
+  },
   "hero": {
     "tag": "Персональный академический сайт",
-    "name": "Гуломов Олимжон",
+    "name": "[ФИО профессора]",
     "desc": "Доктор юридических наук, профессор. Научные интересы: конституционное право, государственное управление, правовая политика и реформы.",
-    "about": "Биография",
-    "publications": "Публикации",
-    "contact": "Контакты",
+    "portraitAlt": "Портрет",
     "photoHint": "Разместите изображение здесь:"
   },
   "stats": {
     "books": "Книги",
     "articles": "Статьи",
-    "years": "Лет опыта"
+    "years": "Лет опыта",
+    "booksValue": "12",
+    "articlesValue": "48",
+    "yearsValue": "20+"
   },
   "bio": {
     "title": "Биография",
     "subtitle": "Краткая профессиональная информация",
-    "text": "Здесь следует указать образование, профессиональный путь, научные достижения, исследовательские интересы и награды."
+    "profile": {
+      "title": "Профиль",
+      "text": "Доктор юридических наук, профессор. Научная и профессиональная деятельность в сфере публичного права и управления."
+    },
+    "education": {
+      "title": "Образование",
+      "text": "Добавьте степени, учебные заведения и годы (например: докторантура/PhD, магистратура, бакалавриат)."
+    },
+    "positions": {
+      "title": "Должности",
+      "text": "Укажите текущие и предыдущие должности: кафедра, университет, центры, экспертные советы."
+    },
+    "long": "Сформулируйте точную и проверяемую биографию: ключевые этапы, компетенции, вклад в науку и практику, награды, общественная служба."
+  },
+  "research": {
+    "title": "Научная работа",
+    "subtitle": "Основные направления и текущие проекты",
+    "interests": {
+      "title": "Научные интересы",
+      "text": "Перечислите 4–8 направлений (например: конституционные реформы, госуправление, правовая политика, антикоррупционное управление)."
+    },
+    "projects": {
+      "title": "Проекты и сотрудничество",
+      "text": "Укажите проекты, гранты, приглашения и форматы сотрудничества с организациями."
+    }
   },
   "pub": {
     "title": "Публикации",
     "subtitle": "Избранные научные работы",
-    "books": { "title": "Книги", "text": "Авторские книги, годы издания, издательства." },
-    "journals": { "title": "Научные статьи", "text": "Статьи в рецензируемых научных журналах." },
-    "foreign": { "title": "Зарубежные публикации", "text": "Международные публикации и научное сотрудничество." }
-  },
-  "news": {
-    "title": "Новости",
-    "subtitle": "События, обновления и объявления",
-    "date": "Январь 2026",
-    "item": "Новость",
-    "readMore": "Подробнее"
+    "books": {
+      "title": "Книги",
+      "text": "Авторские книги, годы издания, издательства."
+    },
+    "journals": {
+      "title": "Научные статьи",
+      "text": "Статьи в рецензируемых научных журналах."
+    },
+    "foreign": {
+      "title": "Зарубежные публикации",
+      "text": "Международные публикации и научное сотрудничество."
+    },
+    "note": "Совет: добавьте ссылки на Google Scholar/ORCID для удобной верификации публикаций."
   },
   "contact": {
     "title": "Контакты",
@@ -38,9 +77,253 @@
     "emailTitle": "Электронная почта",
     "phoneTitle": "Телефон",
     "locationTitle": "Местоположение",
-    "locationText": "Ташкент, Узбекистан"
+    "emailValue": "example@email.com",
+    "phoneValue": "+998 XX XXX XX XX",
+    "locationText": "[Город], [Страна]"
   },
   "footer": {
     "rights": "Все права защищены."
   }
 }
+"use client";
+
+import Image from "next/image";
+import Link from "next/link";
+import { useLocale, useTranslations } from "next-intl";
+
+const LOCALES = ["en", "ru", "uz"] as const;
+
+export default function Home() {
+  const t = useTranslations();
+  const locale = useLocale();
+
+  return (
+    <main className="min-h-screen bg-[radial-gradient(1200px_600px_at_20%_0%,rgba(0,0,0,0.06),transparent_60%),radial-gradient(1000px_500px_at_90%_10%,rgba(0,0,0,0.05),transparent_55%)] bg-white text-neutral-950">
+      <header className="sticky top-0 z-50 border-b border-neutral-200/70 bg-white/70 backdrop-blur">
+        <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-4">
+          <Link href={`/${locale}`} className="group flex items-center gap-3">
+            <div className="grid h-9 w-9 place-items-center rounded-xl border border-neutral-200 bg-white shadow-sm">
+              <span className="text-sm font-semibold">G</span>
+            </div>
+            <div className="flex flex-col leading-tight">
+              <span className="text-sm font-semibold tracking-tight group-hover:underline">
+                {t("hero.name")}
+              </span>
+              <span className="text-xs text-neutral-500">{t("hero.tag")}</span>
+            </div>
+          </Link>
+
+          <nav className="hidden items-center gap-6 text-sm font-semibold text-neutral-700 md:flex">
+            <a className="hover:text-neutral-950" href="#biography">
+              {t("nav.biography")}
+            </a>
+            <a className="hover:text-neutral-950" href="#research">
+              {t("nav.research")}
+            </a>
+            <a className="hover:text-neutral-950" href="#publications">
+              {t("nav.publications")}
+            </a>
+            <a className="hover:text-neutral-950" href="#contact">
+              {t("nav.contact")}
+            </a>
+          </nav>
+
+          <div className="flex items-center gap-2">
+            {LOCALES.map((l) => (
+              <Link
+                key={l}
+                href={`/${l}`}
+                className={
+                  "rounded-full border px-3 py-1 text-xs font-semibold tracking-wide transition " +
+                  (l === locale
+                    ? "border-neutral-950 bg-neutral-950 text-white"
+                    : "border-neutral-200 bg-white text-neutral-700 hover:bg-neutral-50")
+                }
+                aria-current={l === locale ? "page" : undefined}
+              >
+                {l.toUpperCase()}
+              </Link>
+            ))}
+          </div>
+        </div>
+      </header>
+
+      <section className="mx-auto max-w-6xl px-5 pb-14 pt-12">
+        <div className="grid gap-10 md:grid-cols-[1.15fr_.85fr] md:items-center">
+          <div>
+            <p className="inline-flex items-center gap-2 rounded-full border border-neutral-200 bg-white px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-neutral-600 shadow-sm">
+              <span className="h-1.5 w-1.5 rounded-full bg-neutral-950" />
+              {t("hero.tag")}
+            </p>
+
+            <h1 className="mt-4 text-4xl font-semibold tracking-tight md:text-6xl">{t("hero.name")}</h1>
+
+            <p className="mt-5 max-w-2xl text-base leading-relaxed text-neutral-700 md:text-lg">{t("hero.desc")}</p>
+
+            <div className="mt-8 flex flex-wrap gap-3">
+              <a
+                href="#biography"
+                className="rounded-2xl bg-neutral-950 px-5 py-3 text-sm font-semibold text-white shadow-sm hover:bg-neutral-900"
+              >
+                {t("cta.biography")}
+              </a>
+              <a
+                href="#publications"
+                className="rounded-2xl border border-neutral-200 bg-white px-5 py-3 text-sm font-semibold text-neutral-950 shadow-sm hover:bg-neutral-50"
+              >
+                {t("cta.publications")}
+              </a>
+              <a
+                href="#contact"
+                className="rounded-2xl border border-neutral-200 bg-white px-5 py-3 text-sm font-semibold text-neutral-950 shadow-sm hover:bg-neutral-50"
+              >
+                {t("cta.contact")}
+              </a>
+            </div>
+
+            <div className="mt-10 grid gap-3 sm:grid-cols-3">
+              <Stat label={t("stats.books")} value={t("stats.booksValue")} />
+              <Stat label={t("stats.articles")} value={t("stats.articlesValue")} />
+              <Stat label={t("stats.years")} value={t("stats.yearsValue")} />
+            </div>
+          </div>
+
+          <div className="relative">
+            <div className="relative overflow-hidden rounded-3xl border border-neutral-200 bg-white p-6 shadow-sm">
+              <div className="pointer-events-none absolute -right-28 -top-28 h-72 w-72 rounded-full bg-neutral-200/50 blur-3xl" />
+              <div className="pointer-events-none absolute -bottom-28 -left-28 h-72 w-72 rounded-full bg-neutral-100 blur-3xl" />
+
+              <div className="relative overflow-hidden rounded-3xl border border-neutral-200 bg-neutral-50">
+                <Image
+                  src="/portrait.jpg"
+                  alt={t("hero.portraitAlt")}
+                  width={900}
+                  height={1100}
+                  className="h-auto w-full object-cover"
+                  priority
+                />
+              </div>
+
+              <p className="mt-4 text-center text-xs text-neutral-500">
+                {t("hero.photoHint")} <code className="text-neutral-700">public/portrait.jpg</code>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <Divider />
+
+      <Section id="biography" title={t("bio.title")} subtitle={t("bio.subtitle")}>
+        <div className="grid gap-4 md:grid-cols-3">
+          <Card title={t("bio.profile.title")} text={t("bio.profile.text")} />
+          <Card title={t("bio.education.title")} text={t("bio.education.text")} />
+          <Card title={t("bio.positions.title")} text={t("bio.positions.text")} />
+        </div>
+        <div className="mt-4 rounded-3xl border border-neutral-200 bg-white p-6 leading-relaxed text-neutral-700 shadow-sm">
+          {t("bio.long")}
+        </div>
+      </Section>
+
+      <Divider />
+
+      <Section id="research" title={t("research.title")} subtitle={t("research.subtitle")}>
+        <div className="grid gap-4 md:grid-cols-2">
+          <Card title={t("research.interests.title")} text={t("research.interests.text")} />
+          <Card title={t("research.projects.title")} text={t("research.projects.text")} />
+        </div>
+      </Section>
+
+      <Divider />
+
+      <Section id="publications" title={t("pub.title")} subtitle={t("pub.subtitle")}>
+        <div className="grid gap-4 md:grid-cols-3">
+          <Card title={t("pub.books.title")} text={t("pub.books.text")} />
+          <Card title={t("pub.journals.title")} text={t("pub.journals.text")} />
+          <Card title={t("pub.foreign.title")} text={t("pub.foreign.text")} />
+        </div>
+        <div className="mt-4 rounded-3xl border border-neutral-200 bg-white p-6 text-sm leading-relaxed text-neutral-600 shadow-sm">
+          {t("pub.note")}
+        </div>
+      </Section>
+
+      <Divider />
+
+      <Section id="contact" title={t("contact.title")} subtitle={t("contact.subtitle")}>
+        <div className="grid gap-4 md:grid-cols-3">
+          <Card title={t("contact.emailTitle")} text={t("contact.emailValue")} />
+          <Card title={t("contact.phoneTitle")} text={t("contact.phoneValue")} />
+          <Card title={t("contact.locationTitle")} text={t("contact.locationText")} />
+        </div>
+      </Section>
+
+      <footer className="border-t border-neutral-200 bg-white">
+        <div className="mx-auto max-w-6xl px-5 py-10 text-sm text-neutral-600">
+          © {new Date().getFullYear()} {t("footer.rights")}
+        </div>
+      </footer>
+    </main>
+  );
+}
+
+function Divider() {
+  return (
+    <div className="mx-auto max-w-6xl px-5">
+      <div className="h-px w-full bg-neutral-200" />
+    </div>
+  );
+}
+
+function Section({
+  id,
+  title,
+  subtitle,
+  children
+}: {
+  id: string;
+  title: string;
+  subtitle: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <section id={id} className="mx-auto max-w-6xl px-5 py-10">
+      <div className="flex flex-col gap-2">
+        <h2 className="text-2xl font-semibold tracking-tight text-neutral-950">{title}</h2>
+        <p className="text-neutral-600">{subtitle}</p>
+      </div>
+      <div className="mt-6">{children}</div>
+    </section>
+  );
+}
+
+function Card({ title, text }: { title: string; text: string }) {
+  return (
+    <div className="rounded-3xl border border-neutral-200 bg-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">
+      <div className="text-base font-semibold text-neutral-950">{title}</div>
+      <div className="mt-2 text-sm leading-relaxed text-neutral-600">{text}</div>
+    </div>
+  );
+}
+
+function Stat({ label, value }: { label: string; value: string }) {
+  return (
+    <div className="rounded-3xl border border-neutral-200 bg-white p-4 shadow-sm">
+      <div className="text-xl font-semibold text-neutral-950">{value}</div>
+      <div className="mt-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-neutral-500">
+        {label}
+      </div>
+    </div>
+  );
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { text-rendering: geometricPrecision; }
+a { text-underline-offset: 3px; }
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { text-rendering: geometricPrecision; }
+a { text-underline-offset: 3px; } 
